@@ -39,3 +39,15 @@
     scale: .99;
     cursor: pointer;
 }
+
+
+.form_registro{
+    width: 500px;
+    height: 600px;
+    
+}
+
+.tabla_registro{
+    width: 100%;
+    border: 2px solid red;
+}

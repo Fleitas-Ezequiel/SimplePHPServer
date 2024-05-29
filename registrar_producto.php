@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
 	<title>Clientes</title>
 </head>
 <body class="main">
-	<form class="form_registro" action="procesarRegistroCliente.php" method="POST">
-		<table>
+	<form class="form_registro" action="procesarRegistroProductos.php" method="post">
+		<table align="center">
 			<tr>
 				<td>Nombre</td>
 				<td>
@@ -15,15 +16,15 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Email</td>
+				<td>Descripcion</td>
 				<td>
-					<input type="email" name="email">
+					<input type="text" name="descripcion">
 				</td>
 			</tr>
 			<tr>
-				<td>Telefono</td>
+				<td>Precio</td>
 				<td>
-					<input type="number" name="tel">
+					<input type="number" name="precio">
 				</td>
 			</tr>
 			<tr>
