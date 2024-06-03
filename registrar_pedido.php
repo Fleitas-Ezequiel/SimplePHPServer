@@ -35,7 +35,32 @@
 	</form>
 	<?php
 		include("conection.php");
-
+		$sql = "SELECT c.nombre,c.email,c.telefono,p.total FROM pedidos AS p INNER JOIN clientes AS c ON c.cliente_id = p.cliente_id;";
+		$res = mysqli_query($con, $sql);
+		if($res==false){
+			echo "no hay registros";
+		}else{
 	?>
+
+	<table border='1' align='auto' style="margin:5px">
+		<tr>
+			<td>Nombre</td>
+			<td>Email</td>
+			<td>Telefono</td>
+			<td>Total</td>
+		</tr>
+
+	<?php
+		while($vec = mysqli_fetch_array($res)){
+				echo "<tr>";
+				echo"<td>$vec[0]</td>";
+				echo"<td>$vec[1]</td>";
+				echo"<td>$vec[2]</td>";
+				echo"<td>$vec[3]</td>";
+			echo"</tr>";
+		}
+			echo "</table>";
+		}
+    ?>
 </body>
 </html>

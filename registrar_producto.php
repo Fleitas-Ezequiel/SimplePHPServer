@@ -35,7 +35,30 @@
 	</form>
 	<?php
 		include("conection.php");
-
+		$sql = "SELECT p.nombre,p.descripcion,p.precio FROM productos AS p;";
+		$res = mysqli_query($con, $sql);
+		if($res==false){
+			echo "no hay registros";
+		}else{
 	?>
+
+	<table border='1' align='auto' style="margin:5px">
+		<tr>
+			<td>Nombre</td>
+			<td>Descripcion</td>
+			<td>Precio</td>
+		</tr>
+
+	<?php
+		while($vec = mysqli_fetch_array($res)){
+				echo "<tr>";
+				echo"<td>$vec[0]</td>";
+				echo"<td>$vec[1]</td>";
+				echo"<td>$vec[2]</td>";
+			echo"</tr>";
+		}
+			echo "</table>";
+		}
+    ?>
 </body>
 </html>
