@@ -30,4 +30,10 @@
         FOREIGN KEY (cliente_id) REFERENCES clientes(cliente_id)
     );";
     mysqli_query($con, $sql_pedidos);
+
+    $crear_clientes = "INSERT INTO clientes (nombre, email, telefono) VALUES
+        ('Ezequiel Fleitas', 'ezequiel.fleitas@example.com', '1234567890'),
+        ('Ariel Fermani', 'ariel.fermani@example.com', '1234567890'),
+        ('Andres Michael', 'andres.michael@example.com', '0987654321');";
+    mysqli_query($con, $crear_clientes);
 ?>
